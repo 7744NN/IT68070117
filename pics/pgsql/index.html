@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ITF Simple Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="left">68070117</div>
+    <div class="center">ITF Website</div>
+    <div class="right">Week 14</div>
+  </div>
+
+  <!-- Title Section -->
+  <div class="title">
+    <h1>ITF Simple Bank</h1>
+    <p>Welcome to my first HTML + CSS + JS website!</p>
+  </div>
+
+  <!-- History Section -->
+  <textarea id="history" readonly>1, Current account balance: 1000, Current cash balance: 1000</textarea>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Left Column -->
+    <div class="column">
+      <h2>Account Overview</h2>
+
+
+      <div class="balance-info">
+        <div>
+          <p><b>Balance Information</b></p>
+          <label>Current account balance:</label><br>
+          <input type="number" id="accountBalance" value="1000"><br>
+          <label>Current cash balance:</label><br>
+          <input type="number" id="cashBalance" value="1000"><br>
+          <button onclick="setBalance()">Change</button>
+        </div>
+      </div>
+
+      <div class="operation">
+        <div>
+          <p><b>Bank Operation</b></p>
+          <select id="operationType">
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+          </select>
+          <input type="number" id="amount" placeholder="Amount">
+          <button onclick="proceed()">Proceed</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="column">
+      <h2>Financial Tools</h2>
+      <div class="converter">
+        <div>
+          <p><b>Currency Converter</b></p>
+          <label>Input balance:</label><br>
+          <input type="number" id="inputBalance" value="0"><br>
+          <label>Output balance:</label><br>
+          <input type="number" id="outputBalance" readonly><br>
+          <label>Input currency:</label><br>
+          <select id="currency">
+            <option value="USD">USD</option>
+            <option value="THB">THB</option>
+          </select>
+          <button onclick="convert()">Convert</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
